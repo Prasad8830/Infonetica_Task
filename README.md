@@ -4,7 +4,7 @@ A lightweight **workflow management system** built with **.NET 8.0 Minimal API**
 
 ---
 
-## ✅ Technologies Used
+## Technologies Used
 - **.NET 8.0** - Modern, fast framework
 - **ASP.NET Core Minimal API** - For lightweight REST API
 - **C#** - Primary programming language
@@ -12,7 +12,7 @@ A lightweight **workflow management system** built with **.NET 8.0 Minimal API**
 
 ---
 
-## ✅ Features
+## Features
 - **Workflow Definition Management** - Create and retrieve workflows
 - **Workflow Execution** - Start instances and perform actions
 - **State Transitions** - Configurable actions between states
@@ -21,7 +21,7 @@ A lightweight **workflow management system** built with **.NET 8.0 Minimal API**
 
 ---
 
-## ✅ Project Structure
+## Project Structure
 ```
 InfoneticaTask/
 ├── Models/
@@ -38,7 +38,7 @@ InfoneticaTask/
 
 ---
 
-## ✅ API Endpoints
+## API Endpoints
 
 ### **Workflows**
 | Method | Endpoint         | Description                   |
@@ -61,7 +61,7 @@ InfoneticaTask/
 
 ---
 
-## ✅ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - Install **.NET 8.0 SDK** → [Download here](https://dotnet.microsoft.com/en-us/download)
