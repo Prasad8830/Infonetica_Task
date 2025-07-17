@@ -2,6 +2,8 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;  // For Select(), FirstOrDefault(), First()
+using InfoneticaTask.Models;
+
 
 
 public class WorkflowService
@@ -57,7 +59,7 @@ public class WorkflowService
         if (def.States.First(s => s.Id == instance.CurrentState).IsFinal) return (false, "Current state is final");
 
         instance.CurrentState = toState.Id;
-        instance.History.Add(new HistoryEntry { ActionId = actionId, Timestamp = DateTime.UtcNow });
+        instance.History.Add(new HistoryEntry(actionId, DateTime.UtcNow));
 
 
         return (true, $"Action executed, new state: {toState.Name}");

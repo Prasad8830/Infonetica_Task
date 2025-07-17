@@ -1,7 +1,6 @@
-using System;
+namespace InfoneticaTask.Models;
 
-public class HistoryEntry
-{
-    public string ActionId { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
+public record HistoryEntry(
+    string ActionId,
+    DateTime Timestamp
+);

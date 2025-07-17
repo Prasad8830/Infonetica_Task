@@ -1,4 +1,5 @@
 using Microsoft.OpenApi.Models;
+using InfoneticaTask.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
