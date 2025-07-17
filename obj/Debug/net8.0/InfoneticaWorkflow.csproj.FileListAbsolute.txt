@@ -55,3 +55,5 @@
 /home/prasad/Development/intern/InfoneticaTask/obj/Debug/net8.0/InfoneticaWorkflow.pdb
 /home/prasad/Development/intern/InfoneticaTask/obj/Debug/net8.0/InfoneticaWorkflow.genruntimeconfig.cache
 /home/prasad/Development/intern/InfoneticaTask/obj/Debug/net8.0/ref/InfoneticaWorkflow.dll
+/home/prasad/Development/intern/InfoneticaTask/bin/Debug/net8.0/PostmanTesting.json
+/home/prasad/Development/intern/InfoneticaTask/obj/Debug/net8.0/InfoneticaWorkflow.sourcelink.json

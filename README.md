@@ -87,3 +87,6 @@ dotnet run
     API Base URL: http://localhost:5153
 
     Swagger UI: http://localhost:5153/swagger
+
+## Important
+ Uses in-memory storage (data resets on restart)
