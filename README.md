@@ -32,16 +32,19 @@ Built using the **Model-View-Controller (MVC)** architecture provided by ASP.NET
 ## Project Structure
 ```
 InfoneticaTask/
+├── Controllers/
+│ ├── WorkflowController.cs    # Handles workflow definition endpoints
+│ ├── InstanceController.cs    # Handles workflow instance endpoints
 ├── Models/
-│ ├── State.cs # Workflow state model
-│ ├── ActionTransition.cs # Actions connecting states
-│ ├── WorkflowDefinition.cs # Workflow template
-│ ├── WorkflowInstance.cs # Instance of workflow
-│ └── HistoryEntry.cs # Transition history
+│ ├── State.cs                 # Workflow state model
+│ ├── ActionTransition.cs      # Actions connecting states
+│ ├── WorkflowDefinition.cs    # Workflow template
+│ ├── WorkflowInstance.cs      # Instance of workflow
+│ └── HistoryEntry.cs          # Transition history
 ├── Services/
-│ └── WorkflowService.cs # Core business logic
-├── Program.cs # Application entry point
-└── InfoneticaWorkflow.csproj # Project configuration
+│ └── WorkflowService.cs       # Core business logic
+├── Program.cs                 # Application entry point
+└── InfoneticaWorkflow.csproj  # Project configuration
 ```
 
 ---
