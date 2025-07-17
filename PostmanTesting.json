@@ -1,0 +1,111 @@
+{
+  "info": {
+    "name": "Infonetica Workflow API",
+    "_postman_id": "d12345f6-7890-4abc-a567-1d2e3f456789",
+    "description": "Postman collection for testing Infonetica Workflow Management System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Workflow",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"workflow-1\",\n  \"name\": \"Sample Workflow\",\n  \"states\": [\n    { \"id\": \"S1\", \"name\": \"Start\", \"isInitial\": true, \"isFinal\": false, \"enabled\": true },\n    { \"id\": \"S2\", \"name\": \"End\", \"isInitial\": false, \"isFinal\": true, \"enabled\": true }\n  ],\n  \"actions\": [\n    { \"id\": \"A1\", \"name\": \"GoToEnd\", \"enabled\": true, \"fromStates\": [\"S1\"], \"toState\": \"S2\" }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5153/workflows",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["workflows"]
+        }
+      }
+    },
+    {
+      "name": "Get All Workflows",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5153/workflows",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["workflows"]
+        }
+      }
+    },
+    {
+      "name": "Get Workflow by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5153/workflows/workflow-1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["workflows", "workflow-1"]
+        }
+      }
+    },
+    {
+      "name": "Start Workflow Instance",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5153/instances/workflow-1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["instances", "workflow-1"]
+        }
+      }
+    },
+    {
+      "name": "Get All Instances",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5153/instances",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["instances"]
+        }
+      }
+    },
+    {
+      "name": "Execute Action on Instance",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5153/instances/{{instanceId}}/actions/A1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["instances", "{{instanceId}}", "actions", "A1"]
+        }
+      }
+    },
+    {
+      "name": "Get Instance Details",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5153/instances/{{instanceId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5153",
+          "path": ["instances", "{{instanceId}}"]
+        }
+      }
+    }
+  ]
+}
