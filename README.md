@@ -78,7 +78,7 @@ InfoneticaTask/
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd InfoneticaTask
+cd Infonetica_Task
 
 # Restore dependencies
 dotnet restore
