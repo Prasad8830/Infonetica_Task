@@ -1,1 +1,13 @@
-{}
+{
+  "4234d6e0-b658-4d48-8175-777ab5de9dda": {
+    "Id": "4234d6e0-b658-4d48-8175-777ab5de9dda",
+    "WorkflowId": "workflow-1",
+    "CurrentState": "S2",
+    "History": [
+      {
+        "ActionId": "A1",
+        "Timestamp": "2025-07-17T16:26:41.973724Z"
+      }
+    ]
+  }
+}

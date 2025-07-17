@@ -12,6 +12,14 @@ A lightweight **workflow management system** built with **.NET 8.0 Minimal API**
 
 ---
 
+## Architecture: MVC Pattern
+Built using the **Model-View-Controller (MVC)** architecture provided by ASP.NET Core:
+- **Model:** Represents the data structures for workflow (States, Actions, WorkflowDefinition, WorkflowInstance).
+- **Controller:** Defines API endpoints for workflows and instances using attribute routing.
+- **Service:** Contains the core logic for creating workflows, managing state transitions, and persisting data.
+
+---
+
 ## Features
 - **Workflow Definition Management** - Create and retrieve workflows
 - **Workflow Execution** - Start instances and perform actions
@@ -107,15 +115,7 @@ Uses **JSON file persistence**:
 - Automatically execute actions after a specified delay (e.g., escalate a ticket after 24 hours).
 - **How:** Implement a background service (using `IHostedService`) to monitor workflow instances and trigger scheduled actions.
 
-### **2. Dynamic Action Conditions (Guards)**
-- Add conditions for actions (e.g., "Approve" allowed only if the user has `Admin` role).
-- **How:** Introduce conditional logic in `ActionTransition` and evaluate during action execution.
-
-### **3. Workflow Versioning**
-- Allow workflows to evolve without breaking existing instances.
-- **How:** Add a `Version` property to `WorkflowDefinition` and store version info in each `WorkflowInstance`.
-
-### **4. Authentication & Authorization**
+### **2. Authentication & Authorization**
 - Secure API endpoints with **JWT-based authentication**.
 - Restrict workflow actions based on user roles.
 

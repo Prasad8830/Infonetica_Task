@@ -76,5 +76,29 @@
         "ToState": "S2"
       }
     ]
+  },
+  "string": {
+    "Id": "string",
+    "Name": "string",
+    "States": [
+      {
+        "Id": "string",
+        "Name": "string",
+        "IsInitial": true,
+        "IsFinal": true,
+        "Enabled": true
+      }
+    ],
+    "Actions": [
+      {
+        "Id": "string",
+        "Name": "string",
+        "Enabled": true,
+        "FromStates": [
+          "string"
+        ],
+        "ToState": "string"
+      }
+    ]
   }
 }
