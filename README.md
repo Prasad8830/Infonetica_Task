@@ -22,6 +22,7 @@ A lightweight **workflow management system** built with **.NET 8.0 Minimal API**
 ---
 
 ## ✅ Project Structure
+```
 InfoneticaTask/
 ├── Models/
 │ ├── State.cs # Workflow state model
@@ -33,7 +34,7 @@ InfoneticaTask/
 │ └── WorkflowService.cs # Core business logic
 ├── Program.cs # Application entry point
 └── InfoneticaWorkflow.csproj # Project configuration
-
+```
 
 ---
 
