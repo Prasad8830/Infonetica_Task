@@ -1,4 +1,4 @@
-# InfoneticaTask - Workflow Management System
+# Infonetica - Workflow Management System
 
 A lightweight **workflow management system** built with **.NET 8.0 Minimal API**, providing features for workflow definition, instance management, state transitions, and history tracking.
 
@@ -82,6 +82,7 @@ dotnet add package Swashbuckle.AspNetCore --version 6.5.0
 dotnet build
 dotnet run
 ```
+---
 
 ## Access API & Documentation
 
@@ -89,5 +90,33 @@ dotnet run
 
     Swagger UI: http://localhost:5153/swagger
 
+---
+
 ## Important
- Uses in-memory storage (data resets on restart)
+
+### Persistence
+Uses **JSON file persistence**:
+- `workflows.json` → Stores all workflow definitions
+- `instances.json` → Stores all workflow instances
+
+---
+
+## Future Enhancements
+
+### **1. Timed / Scheduled Actions**
+- Automatically execute actions after a specified delay (e.g., escalate a ticket after 24 hours).
+- **How:** Implement a background service (using `IHostedService`) to monitor workflow instances and trigger scheduled actions.
+
+### **2. Dynamic Action Conditions (Guards)**
+- Add conditions for actions (e.g., "Approve" allowed only if the user has `Admin` role).
+- **How:** Introduce conditional logic in `ActionTransition` and evaluate during action execution.
+
+### **3. Workflow Versioning**
+- Allow workflows to evolve without breaking existing instances.
+- **How:** Add a `Version` property to `WorkflowDefinition` and store version info in each `WorkflowInstance`.
+
+### **4. Authentication & Authorization**
+- Secure API endpoints with **JWT-based authentication**.
+- Restrict workflow actions based on user roles.
+
+---

@@ -1,0 +1,15 @@
+{
+  "123e4567-e89b-12d3-a456-426614174000": {
+    "Id": "123e4567-e89b-12d3-a456-426614174000",
+    "Name": "Sample Workflow",
+    "States": [
+      { "Id": "S1", "Name": "Start", "IsInitial": true, "IsFinal": false, "Enabled": true },
+      { "Id": "S2", "Name": "In Progress", "IsInitial": false, "IsFinal": false, "Enabled": true },
+      { "Id": "S3", "Name": "Completed", "IsInitial": false, "IsFinal": true, "Enabled": true }
+    ],
+    "Actions": [
+      { "Id": "A1", "Name": "Move to In Progress", "FromStates": ["S1"], "ToState": "S2", "Enabled": true },
+      { "Id": "A2", "Name": "Complete Workflow", "FromStates": ["S2"], "ToState": "S3", "Enabled": true }
+    ]
+  }
+}
